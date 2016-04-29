@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Fort Collins WordPress Meetup - WooConf Presentation | Road Warrior Creative</title>
+		<title>WordPress Development - CSU CT310 | Road Warrior Creative</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/rwc.css">
@@ -25,250 +25,38 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1>Highlights from WooConf 2016</h1>
+					<h1>WordPress Development</h1>
+					<p>Amber Hinds</p>
 				</section>
 				<section>
-					<h2>WordPress eCommerce</h2>
+					<h2>Why WordPress?</h2>
 					<section>
-						<p>About WooCommerce</p>
-						<ul>
-							<li>WordPress plugin</li>
-							<li>Adds a shopping cart/product management/checkout</li>
-							<li>On over 37% of all online stores</li>
-						</ul>
+						<p>Because copy/pasting content is boring.</p>
 					</section>
 					<section>
-						<p>Learn More</p>
-						<ul>
-							<li><a href="https://wordpress.org/plugins/woocommerce/" target="_blank">Install in dashboard/from WordPress.org</a></li>
-							<li><a href="https://www.woothemes.com/product-category/woocommerce-extensions/" target="_blank">WooCommerce Extensions</a></li>
-							<li><a href="https://docs.woothemes.com/documentation/plugins/woocommerce/getting-started/" target="_blank">Getting Started Documentation</a></li>
-							<li><a href="https://docs.woothemes.com/document/woocommerce-101-video-series/" target="_blank">WooCommerce 101 Videos</a></li>
-						</ul>
+						<p>Lots of resources for learning.</p>
+					</section>
+					<section>
+						<p>Large collaborative community.</p>
 					</section>
 				</section>
 				<section>
-					<img data-src="/fcwp-meetup-wooconf/images/agenda.jpg" alt="WooConf agenda">
-				</section>
-				<section>
-					<h2>State of Woo</h2>
+					<h2>What does a WordPress developer do?</h2>
 					<section>
-						<p>"I think this smart phone thing is going to be big."<br/>-Matt Mullenweg</p>
+						<p>Builds and sells software products: themes and/or plugins.</p>
 					</section>
 					<section>
-						<p>Recent changes: Stripe & PayPal Pro are now free<p>
+						<p>Works in-house for a business with a WordPress website.</p>
 					</section>
 					<section>
-						<p>What's next<p>
-							<ul>
-								<li>Bigger SSL push</li>
-								<li>More localization</li>
-								<li>Greater emphasis on scalability - <a href="http://momentlens.co/shop/" target="_blank">MomentLens.co</a></li>
-								<li>Bluehost partnership</li>
-								<li>JetPack-like Cloud Model</li>
-							</ul>
+						<p>Builds websites - themes/plugins - for clients.</p>
+					</section>
+					<section>
+						<p>Combination of coding from scratch, modifying someone else's code, and clicking buttons in a CMS.</p>
 					</section>
 				</section>
 				<section>
-					<h2>Scaling WordPress: ColourPop</h2>
-					<section>
-						<a href="http://colourpope.com" target="_blank"><img src="/fcwp-meetup-wooconf/images/colourpop.png" alt="ColourPop"></a>
-					</section>
-					<section>
-						<p>Chris Lema - 5 lessons<p>
-							<ol>
-								<li>Figure out your metric</li>
-								<li>Scaling takes more than just setting it up</li>
-								<li>Hire developers who like testing more than anything else</li>
-								<li>Your host should be a partner not a vendor</li>
-								<li>If you end well, people remember it positively</li>
-							</ol>
-					</section>
-					<section>
-						<h3>70,000</h3>
-						<p>No. of times a coupon can be used before things break</p>
-					</section>
-					<section>
-						<h3>38</h3>
-						<p>Number of inserts to wp_postmeta by WooCommerce on check out</p>
-					</section>
-					<section>
-						<p>Patrick Garman<p>
-							<ul>
-								<li>Lots of traffic:</li>
-									<ul>
-										<li>Static Cache</li>
-										<li>Serve cached pages to logged in users</li>
-										<li>Remove header/sidebar carts</li>
-										<li>Turn off My Account page</li>
-									</ul>
-								<li>Lots of products</li>
-								<ul>
-										<li>Paginate customer reviews</li>
-										<li>disable "show verified owner" label on reviews</li>
-										<li>Replace WP search</li>
-									</ul>
-							</ul>
-						<aside class="notes">
-							Cache doesn't work when people are placing an order - carts can't be cached.
-					        https://core.trac.wordpress.org/ticket/34848 - Updating Post Meta in bulk.  Normally each add_post_meta creates it's own SQL query; they added code that will batch all into a single query.
-					    </aside>	
-					</section>
-				</section>
-				<section>
-					<h2>Security</h2>
-					<section>
-						<p>You must be PCI compliant<p>
-						<aside class="notes">
-							- Sucuri
-							- Not a law, but still important.
-							- Credit card industry trying to protect itself from financial loss
-							- Penalties: fines & inability to accept credit cards.
-							- Security is not a static state, it is a continuous process
-							- technology is not a replacement for responsibility
-					    </aside>	
-					</section>
-					<section>
-						<ul>
-							<li>Build & maintain a secure network</li>
-							<li>Protect card holder data</li>
-							<li>Maintain a vulnerability management program</li>
-							<li>Implement strong access control measures</li>
-							<li>Regularly monitor & test networks</li>
-							<li>Maintain an information security policy</li>
-						</ul>
-						<aside class="notes">
-							1. Firewall
-							2. Don't use vendor default passwords --
-							3. Protect Stored data
-							4. Encrypt transmission (SSL) --
-							5. Use anti-virus software
-							6. Develop & maintain secure systems (beyond just website: chat/phone) --
-							7. Restrict access - need to know
-							8. Assign unique ID to each person with access
-							9. Restrict physical access --
-							10. Track and monitor access to network resources
-							11. Regularly test
-					    </aside>
-					</section>
-				</section>
-				<section>
-					<h2>Shopping Everywhere</h2>
-					<section>
-						<p>Gone are the days where your customers only shop on your website.</p>
-					</section>
-					<section>
-						<ul>
-							<li>Build mobile first</li>
-							<li>Integrate buy buttons beyond website</li>
-							<ul>
-								<li>Pinterest</li>
-								<li>Email</li>
-								<li>Facebook/Messaging</li>
-							</ul>
-						</ul>
-						<aside class="notes">
-							- Braintree
-							- Adults spend 51% of time on mobile
-							- Smart phone users pick up their phones 85x per day
-							- Buy it button - 87% of pinners have purchased something because of Pinterest
-							- Email nurtuting allows for 50% more sales at 33% less cost
-					    </aside>
-					</section>
-				</section>
-				<section>
-					<h2>Other Useful Information</h2>
-					<section>
-						<h3>Taxes</h3>
-						<ul>
-							<li>Must collect where you have nexus</li>
-							<li>Collect based on shipping address not billing</li>
-							<li><a href="http://SalesTax101.com" target="_blank">SalesTax101.com</a> - free eBook</li>
-							<li><a href="http://youtube.com/taxjar" target="_blank">YouTube.com/taxjar</a> - videos</li>
-						</ul>
-						<aside class="notes">
-							- Nexus: employee, inventory, affiliate, retail location, drop shipping, etc.
-					    </aside>
-					</section>
-					<section>
-						<h3>Shipping</h3>
-						<ul>
-							<li>Customer's last impression of your business</li>
-							<li>Shipping influences purchase decisions</li>
-							<ul>
-								<li>Customers care about shipping when checking out</li>
-								<li>Shipping is the #1 reason for cart abandonment</li>
-							</ul>
-							<aside class="notes">
-								- shopping experience ends when the customer opens the package
-							- Reasons for completing purchase: 81% free shipping, 63% estimated cost and delivery date early in process, having a variety of payment options 54%
-							- 58% shipping made total purchase price higher than expected; 57% not ready to make a purchase just looking at total cost; 55% just creatibg a cart to save for later; 50% Order value didn't qualify for free shipping
-					    </aside>
-					</section>
-					<section>
-						<h3>Shipping Recommendations</h3>
-						<ul>
-							<li>Offer flat rate shipping</li>
-							<li>Free shipping - call to action</li>
-							<li>Free shipping - option</li>
-							<li>Include estimated delivery date</li>
-						</ul>
-						<aside class="notes">
-							- Flat rate: use average shipping rate from historical data; predictablity
-							- Free: don't free ship low value; increase sales
-							- 93% of shoppers take action to qualify for free shipping - add to cart
-							- 50% of consumers choose slower transit time for free shipping
-							- 50% of consumers abandoned cart with no delivery date
-					    </aside>
-					</section>
-					<section>
-						<h3>Memberships</h3>
-						<p>Attracting a new customer costs 5x as much as keeping an existing one.<br/><em>-Lee Resources, 2010</em></p>
-							<aside class="notes">
-								- Replenishment Model
-								- Discovery/Currated Products
-								- Value driven content
-								- Join the cause
-								- loyalty rewards
-					    </aside>
-					</section>
-				</section>
-				<section>
-					<h2>eCommerce Videos</h2>
-					<section>
-						<h3>73%</h3>
-						<p>of US adults are more likely to make a purchase online after watching a video</p>
-					</section>
-					<section>
-						<h3>96%</h3>
-						<p>of US adults find videos helpful when making an online purchase</p>
-					</section>
-					<section>
-						<h3>77%</h3>
-						<p>of US adults consider companies that create online video to be more engaged with customers</p>
-					</section>
-					<section>
-						<img data-src="/fcwp-meetup-wooconf/images/video-types.jpg" alt="Types of marketing videos" width="500px">
-					</section>
-					<section>
-						<img data-src="/fcwp-meetup-wooconf/images/video-results.jpg" alt="Product Video Results" width="500px">
-					</section>
-					<section>
-						<p>Tips for Better Converting Videos<p>
-							<ol>
-								<li>Lighting & sound are more important than video quality</li>
-								<li>Product close ups are important</li>
-								<li>Don't be afrad of getting the details</li>
-								<li>Video length doesn't matter</li>
-								<li>Don't forget calls to action</li>
-								<li>Make the video prominent on your product page</li>
-								<li>Pay attention to your video thumbnail</li>
-								<li>Use social media to deliver the videos</li>
-							</ol>
-					</section>
-					<section>
-						<a href="http://thesauce.atbbq.com/" target="_blank">The Sauce by All Things Barbecue</a>
-					</section>
+
 				</section>
 				<section>
 					<h2>Questions?</h2>
