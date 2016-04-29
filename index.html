@@ -33,6 +33,7 @@
 					<section>
 						<p class="fragment visible">Because copy/pasting content is boring.</p>
 						<p class="fragment visible">Lots of resources for learning.</p>
+						<p class="fragment visible">Open source.</p>
 						<p class="fragment visible">Large collaborative community.</p>
 					</section>
 				</section>
@@ -58,7 +59,7 @@
 						<p>With every WordPress update, most of these files get overwritten.<p>
 					</section>
 					<section>
-						When WordPress updates, your safe zone is:
+						<p>When WordPress updates, your safe zone is:</p>
 						<ul>
 							<li>.htaccess</li>
 							<li>wp-config</li>
@@ -82,24 +83,25 @@
 				<section>
 					<h3>"Posts" & "Pages"</h3>
 					<section>
-						<p>"posts" = blog posts - content related to one another by category/tags (taxonomy) and by date</p>
-						<p>"pages" = stand-alone content that may have a hierarchical relationship to one another or none at all</p>
+						<p>"posts" = blog posts - content related to one another by category/tags (taxonomies) and by date</p>
+						<p>"pages" = stand-alone content that may have a hierarchical relationship to one another or none at all - more static</p>
 					</section>
 					<section>
 						<h3>Actually it's all the same</h3>
-						<p>...they are all stored in the same table: wp_posts</p>			
+						<p>...they are all stored in the same table: wp_posts</p>	
+						<p class="fragment visible">Extra details about content is stored in wp_postmeta & is linked by the post id</p>
 					</section>
 					<section>
 						<h3>Custom Post Types</h3>
-						Create your own as a way of better organizing content...
-						<ul style="clear:both;">
+						<p>Create your own as a way of better organizing content...</p>
+						<ul>
 							<li>staff</li>
 							<li>portfolio items</li>
 							<li>products</li>
 							<li>recipes</li>
 							<li>and more...</li>
 						</ul>
-						<a href="https://codex.wordpress.org/Post_Types" target="_blank">Learn More</a>
+						<p><a href="https://codex.wordpress.org/Post_Types" target="_blank">Learn More</a></p>
 					</section>
 				</section>
 				<section>
@@ -115,7 +117,7 @@
 						</ul>
 					</section>
 					<section>
-						<h3>Learn More</h3>
+						<p>Learn more...</p>
 						<ul>
 							<li><a href="https://codex.wordpress.org/WordPress_Widgets" target="_blank">About Widgets</a></li>
 							<li><a href="https://codex.wordpress.org/Widgets_API" target="_blank">Widgets API</a></li>
@@ -128,17 +130,126 @@
 						<p>A way of adding macros - code fragments - in the body of a post or page<p>
 					</section>
 					<section>
-						<img src="/csu-wordpress-development/images/shortcode.png" alt="shortcode with attributes in WYSIWYG editor">
+						<img src="/csu-wordpress-development/images/shortcode.png" alt="shortcode with attributes in WYSIWYG editor" width="390px;" height="auto">
 					</section>
 					<section>
-						<h3>Learn More</h3>
+						<p>Learn more...</p>
 						<ul>
 							<li><a href="https://codex.wordpress.org/shortcode" target="_blank">About Shortcodes</a></li>
 							<li><a href="https://codex.wordpress.org/Shortcode_API" target="_blank">Shortcode API</a></li>
 						</ul>
-
 					</section>
 				</section>
+				<section>
+					<h2>Theme Development</h2>
+					<section>
+						<p>Themes live in /wp-content/themes</p>
+					</section>
+					<section>
+						<p>More than a skin - the front of the website will literaly not function without a theme.</p>
+						<p class="fragment visible">Themes control the look of the website <span class="fragment visible">and also pull content out of the database.</span></p>
+					</section>
+					<section>
+						<p>Themes can be:</p>
+						<ul>
+							<li>Stand alone & static</li>
+							<li>Part of a framework - they update!</li>
+							<li>Child theme, adopting most styles from a parent theme</li>
+						</ul>
+					</section>
+					<section>
+						<p>Themes contain</p>
+						<ul>
+							<li>Stylesheet - style.css (+ index.php are bare minimum for a child theme)</li>
+							<li>Functions file - functions.php</li>
+								<ul>
+									<li>enqueue stylesheets & scripts</li>
+									<li>Add features - widget areas, custom image handling, etc.</li>
+									<li>Set up options for users</li>
+								</ul>
+							<li>Template Files - PHP source files used to generate the pages requested by visitors, and are output as HTML</li>
+						</ul>
+					</section>
+					<section>
+						<p>Learn more...</p>
+						<ul>
+							<li><a href="https://codex.wordpress.org/Theme_Development" target="_blank">WordPress Theme Development</a></li>
+							<li><a href="http://roadwarriorcreative.com/go/genesis" target="_blank">Genesis Framework</a> - what I use</li>
+							<li><a href="http://underscores.me/" target="_blank">_S</a> (Underscores) - starter theme</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>Plugin Development</h2>
+					<section>
+						<p>Plugins add functionality or modify functionality of WordPress<p>
+						<p class="fragment visible">Some plugins modify the functionality of other plugins.</p>
+					</section>
+					<section>
+						<p>Plugins live in wp_content/plugins</br>...and don't even have to be in a directory.<p>
+					</section>
+					<section>
+						<p>Looking at a basic plugin<p>
+						<p><a href="https://github.com/roadwarriorwp/rwc-contributor-uploads" target="_blank">Enable Contributor Uploads</a></p>
+					</section>
+					<section>
+						<p>Learn more...</p>
+						<ul>
+							<li><a href="https://codex.wordpress.org/Writing_a_Plugin" target="_blank">Writing a Plugin</a></li>
+							<li><a href="https://codex.wordpress.org/Plugin_API" target="_blank">Plugin API</a></li>
+							<li><a href="http://wppb.io/" target="_blank">Plugin Boilerplate</a></li>
+							<li><a href="http://roadwarriorcreative.com/plugins-worth-purchasing-a-look-at-premium-wordpress-plugins/" target="_blank">Plugins Worth Purchasing</a> - talk I gave</li>
+							<li><a href="https://github.com/roadwarriorwp/fcwp-testimonials" target="_blank">Plugin/teaching notes from a plugin dev workshop I co-taught</a></li>
+							<li><a href="https://wordpress.org/plugins/about/" target="_blank">Get Your Plugin on WordPress.org</a></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>Resources</h2>
+					<section>
+						<p>From WordPress</p>
+						<ul>
+							<li><a href="https://codex.wordpress.org/" target="_blank">WordPress Codex</a></li>
+							<li><a href="https://codex.wordpress.org/Developer_Documentation" target="_blank">Developer Documentation</a></li>
+							<li><a href="http://wordpress.tv/" target="_blank">WordPress.tv</a></li>
+							<li><a href="https://themeshaper.com/" target="_blank">ThemeShaper</a></li>
+							<li><a href="https://core.trac.wordpress.org/" target="_blank">Contribute to WordPress Core</a></li>
+						</ul>
+					</section>
+					<section>
+						<p>Books</p>
+						<ul>
+							<li><a href="http://www.amazon.com/Professional-WordPress-Development-Brad-Williams/dp/1118987241/ref=sr_1_2?ie=UTF8&qid=1461906469&sr=8-2&keywords=wordpress+plugin+development" target="_blank">Professional WordPress: Design and Development</a></li>
+							<li><a href="http://www.amazon.com/Professional-WordPress-Plugin-Development-Williams/dp/0470916222/ref=sr_1_1?ie=UTF8&qid=1461906469&sr=8-1&keywords=wordpress+plugin+development" target="_blank">Professional WordPress Plugin Development</a></li>
+							<li><a href="http://www.amazon.com/Building-Apps-WordPress-Brian-Messenlehner/dp/1449364071/ref=sr_1_4?ie=UTF8&qid=1461906469&sr=8-4&keywords=wordpress+plugin+development" target="_blank">Building Web Apps with WordPress</a></li>
+						</ul>
+					</section>
+					<section>
+						<p>Other Resources</p>
+						<ul>
+							<li><a href="https://wpshout.com/" target="_blank">WPShout</a> & <a href="http://upandrunningwp.com/" target="_blank">Up and Running</a></li>
+							<li><a href="https://www.lynda.com/WordPress-training-tutorials/330-0.html" target="_blank">Lynda.com</a></li>
+							<li><a href="https://teamtreehouse.com/library/topic:wordpress" target="_blank">Treehouse</a></li>
+							<li>Just Google It</li>
+						</ul>
+					</section>
+					<section>
+						<p>Podcasts/Hangouts on Air</p>
+						<ul>
+							<li><a href="https://mattreport.com/" target="_blank">The Matt Report</a> - business</li>
+							<li><a href="http://www.wpelevation.com/category/podcast/" target="_blank">WP Elevation</a> - business</li>
+							<li><a href="http://mastermind.fm/" target="_blank">Mastermind.fm</a> - business</li>
+							<li><a href="http://officehours.fm/" target="_blank">Officehours.fm</a> - business</li>
+							<li><a href="http://applyfilters.fm/" target="_blank">Apply Filters</a> - development</li>
+							<li><a href="http://www.wpwatercooler.com/" target="_blank">WP Watercooler & WPblab</a> - general WordPress news</li>
+							<li><a href="http://wptavern.com/wordpress-weekly" target="_blank">WP Tavern/WordPress Weekly</a> - general WordPress news</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>Fort Collins WordPress Meetup</h2>
+					<p>Building Extensible Plugins<br/>Tuesday, May 17th @ 6pm</p>
+					<p><a href="http://www.meetup.com/Fort-Collins-WordPress-Meetup/" target="_blank">Meetup.com/Fort-Collins-WordPress-Meetup</a></p>
 				<section>
 					<h2>Questions?</h2>
 				</section>
