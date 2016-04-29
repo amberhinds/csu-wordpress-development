@@ -50,21 +50,42 @@
 				<section>
 					<h2>Modifying WordPress</h2>
 					<section>
-						<table>
-							<tr>
-								<th>Themes</th>
-								<th>Plugins</th>
-							</tr>
-							<tr>
-								<td>style</td>
-								<td>functionality</td>
-							</tr>
-						</table>
+						<p>Check out the "core" files - know what's there...<p>
+						<p class="fragment visible"><span style="color:red;">but don't change it!</span></p>
 					</section>
 					<section>
-						<img data-src="">
+						When WordPress updates, your safe zone is:
+						<ul>
+							<li>.htaccess</li>
+							<li>wp-config</li>
+							<li>wp-content</li>
+							<li>any non-WP files you have in the root</li>
+						</ul>
+					</section>
+					<section>
+						<p>WP devs build themes and plugins.</p>
+					</section>
+					<section>
+						<h3>Themes</h3>
+						<p>Control style only (best practice; not always reality)</p>
+						<h3>Plugins</h3>
+						<p>Control functionality and (to some degree) style</p>
 					</section>
 				</section>
+				<section>
+					<h2>Jargon & Other Things You Need To Know</h2>
+					<section>
+						<h3>"Posts" vs "Pages" ...actually everything is a post</h3>
+						<ul>
+							<li class="fragment visible">"posts" = blog posts - content related to one another by category/tags (taxonomy) and by date</li>
+							<li class="fragment visible">"pages" = stand-alone content that may have a hierarchical relationship to one another or none at all</li>
+							<li class="fragment visible">They are all stored in the same table</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Custom Post Types</h3>
+						<p>Create your own as a way of better organizing content...</p>
+						
 				<section>
 					<h2>Questions?</h2>
 				</section>
